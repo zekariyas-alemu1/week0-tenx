@@ -94,6 +94,7 @@ class SlackDataLoader:
         """
 
         # specify path to get json files
+        path_channel='../anonymized/channels.json'
         combined = []
         for json_file in glob.glob(f"{path_channel}*.json"):
             with open(json_file, 'r', encoding="utf8") as slack_data:
@@ -177,6 +178,7 @@ class SlackDataLoader:
         return df_reaction
     def get_community_participation(path):
         """ specify path to get json files"""
+        path='../anonymized/users.json'
         combined = []
         comm_dict = {}
         for json_file in glob.glob(f"{path}*.json"):
